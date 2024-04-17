@@ -13,7 +13,7 @@ def setUpAudioData(nameOfWavFile, noise = False):
     originalNumberOfSamples = len(audioData)
     if noise:
         #add noise. Low amplitude as noise will be "lower" than original sampled sound, and it will follow normal distribution. In this case, the mean amplitude of added noise is of 0.02
-        audioData = audioData + 0.02*np.random.randn(len(audioData))
+        audioData = audioData + 0.01*np.random.randn(len(audioData))
     ##As per Nyquist-Shannon theorem, we need a sample rate of 40kHz
     samplesNeededFromShannon = int(np.ceil(nyquistRate*originalNumberOfSamples/sampleRate))
     # Calculate the indices of the evenly spaced samples, such that there are the sufficient samples to satisfy shanon's theorem, and we remove extra samples

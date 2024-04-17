@@ -6,6 +6,7 @@ from FFT import fft
 from Denoiser import denoiseSignal
 
 audioData, stopTime, samplesNeededFromShannon = setUpAudioData("Beethoven_Symphony_No._5_Movement_2,_La_Folia_Variation_(measures_166_-_183).wav")
+print(samplesNeededFromShannon)
 noisyAudioData = setUpAudioData("Beethoven_Symphony_No._5_Movement_2,_La_Folia_Variation_(measures_166_-_183).wav", noise = True)[0]
 t= np.linspace(0, stopTime, samplesNeededFromShannon)
 
