@@ -2,6 +2,7 @@ import numpy as np
 from FFT import fft
 from scipy.integrate import odeint
 from matplotlib import pyplot as plt 
+#methods and techniques from Brunton https://www.youtube.com/watch?v=mMdIxa5qC9Y
 
 L = 90
 N = 2**8
